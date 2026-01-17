@@ -5,23 +5,17 @@
 
 # 翻页笔抖音
  douyinpaging
-
-
  
 抖音翻页笔抖音 - 使用翻页笔上下模拟键盘上下键滑动抖音短视频、快手、TIKTOK、SHOUTS、基本通用。
-
+## 注意
+1.你需要在Mac设置-隐私与安全性-辅助功能中-打开 终端 的选项
+2.在首次运行时运行允许程序监听键盘事件
 ## 功能
 
 - [x] 上下滑动刷视频
 - [x] 长按下键快速关闭当前页，并退出程序
 - [x] 长按上键打开或关闭全屏
 
-## 基于Python编写
-打包命令
-
-```shell script
-Pyinstaller -F -i douyinfanyebiRes.ico main.py
-```
 
 ## 原理
 
@@ -35,8 +29,13 @@ Pyinstaller -F -i douyinfanyebiRes.ico main.py
 从而用翻页笔也能滑动视频。
 
 翻页笔长按下键，一般绑定`<B>`键，使PPT黑屏，让注意力转移到讲师上来。
-那就让`<B>`绑定 输入 Alt+F3快速关闭网页。
+那就让`<B>`绑定 输入 Command+Q退出当前视频程序并关闭控制程序。
+## 基于Python编写
+打包命令
 
+```shell script
+python3 -m PyInstaller --noconfirm --onefile --console --icon="app_icon.icns" --name "DouyinPaging" main.py
+```
 
 ## 使用到的项目
 
